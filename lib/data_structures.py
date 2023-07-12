@@ -44,7 +44,11 @@ def get_average_heat_level(spicy_foods):
     return(int(spice_meter_sum/spice_meter_samples))
 
 def create_spicy_food(spicy_foods, spicy_food):
-    pass
+    new_spicy_food_list = spicy_foods
+    print(new_spicy_food_list)
+    print(spicy_food)
+    new_spicy_food_list.append(spicy_food)
+    return(new_spicy_food_list)
 
 print (get_names(spicy_foods))
 print (get_spiciest_foods(spicy_foods))
@@ -52,3 +56,4 @@ print_spicy_foods(spicy_foods)
 print (get_spicy_food_by_cuisine(spicy_foods, "Sichuan"))
 print_spiciest_foods(spicy_foods)
 print(get_average_heat_level(spicy_foods))
+print(create_spicy_food(spicy_foods, {"name": "Marshmellows", "cuisine":"redneck", "heat_level":0}))
